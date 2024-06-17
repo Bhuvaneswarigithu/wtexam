@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#para").css("color","red").slideUp(1000).slideDown(1000);
+                });
+            });
+        </script>
+
+    
+    </head>
+    <body>
+        <button id="btn">click</button>
+        <p id="para">paragraph</p>
+</html>

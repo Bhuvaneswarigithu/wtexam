@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Login form</title>
+        <style>
+            td{
+                padding:10px;
+               
+            }
+           .login{
+            width:100%;
+          
+           }
+           .for{
+            float: right;
+           }
+           table{
+            border-collapse:collapse;
+            border:1px solid black;
+           
+           }
+         
+        </style>
+        <script>
+            function function1()
+            {
+            var username=document.getElementById('user');
+            var password=document.getElementById('password');
+            if(notEmpty(username,"cannot be null"))
+            {
+                if(isAlphabet(username,"must be an alphabet"))
+                {
+                    if(lengthRestriction(username,6))
+                    {
+                       
+                            if(lengthRestriction1(password,10))
+                            {
+                                
+                               return true;
+                            }
+                            }
+                        }
+                    }
+                
+            
+        
+            return false;
+            }
+            function isAlphabet(name,msg)
+            {
+                var eq=/^[a-zA-Z]+$/;
+                if(name.value.match(eq)){
+                    return true;
+                }
+                else{
+                    alert(msg);
+                    name.focus();
+                    return false;
+                }
+            }
+            function lengthRestriction(name,min)
+            {
+                if(name.value.length>=min){
+                    return true;
+                }
+                else{
+                    alert(`minimum length of ${min} is required`);
+                    name.focus();
+                    return false;
+                }
+            }
+          
+            function lengthRestriction1(pass, eq) {
+    var alphaExp = /^[0-9a-zA-Z]+$/;
+    if (pass.value.length >= eq && pass.value.match(alphaExp)) {
+        return true;
+    } else {
+        alert(`Password must be ${eq} alphanumeric values`);
+        pass.focus();
+        return false;
+    }
+}
+
+function notEmpty(name,msg)
+{
+    if(name.value.length==0){
+        alert(msg);
+        name.focus();
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Login</h1>
+       
+        <form onsubmit="return function1();" action="registration.html">
+           
+            <table align="center">
+                <tr>
+                    <td>
+                        <label>Username</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="user" placeholder="Type your username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" id="password" placeholder="Type Your password">
+                                        <br>
+                                        <a href="forget.php" class="for">Forget password</a></td>
+                </tr>
+                <tr>
+                    <td align="center" >
+                        <input type="submit" name="submit" value="login" class="login" style="background-color: rgb(189, 233, 233);">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Or Sign Up Using</td>
+                </tr>
+                <tr>
+                <td align="center">
+                    <img src="face.jpeg" width="30px" height="30px">
+                    <img src="google.png" width="30px" height="30px">
+                    <img src="twi.png" width="30px" height="30px"><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Or Sign Up Using</p>
+                    Sign Up
+                </td>    
+                </tr>
+            </table>
+        </form>
+        </div>
+    </body>
+</html>

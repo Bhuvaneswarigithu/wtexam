@@ -1,0 +1,59 @@
+<!--
+    <html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").animate({
+                        left:'250px',
+                        opacity:'0.5',
+                        height:'150px',
+                        width:'150px'
+
+                    });
+                });
+            });
+        </script>   
+    </head>
+    <body>
+        <button>start animation</button>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    </body>
+</html> 
+-->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+    $(document).ready(function(){
+        $("#div1").click(function(){
+            $("div2").slideDown(1000);
+        });
+        $("#stop").click(function(){
+            $("#div2").stop();
+        });
+    });
+</script>
+<style>
+    #div1,#div2{
+        padding:5px;
+        font-size:18px;
+        text-align:center;
+        background-color:#555;
+        color:white;
+        border:solid 1px #666;
+        border-radius:3px;
+    }
+    #div2{
+        padding:50px;
+        display:none;
+    }
+</style>
+    </head>
+    <body>
+        <button id="stop">Stop sliding</button>
+        <div id="div1">Click to slide down panel</div>
+        <div id="div2">Hello world!</div>
+    </body>
+</html>

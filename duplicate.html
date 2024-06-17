@@ -1,0 +1,96 @@
+<!--<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+         $(document).ready(function(){
+            $("button").click(function(){
+                $("[href]").hide();
+            });
+         });
+        </script>
+    </head>
+    <body>
+        <p><a href="https://jquery.com/download/">Href download</a>  This is a paragraph</p>
+        <p class="test">This si another paragraph</p>
+        <button>
+            Click me to hide
+        </button>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+$(".btn-one").click(function(){
+   str= $("p").text();
+   alert(str);
+});
+        });
+$(document).ready(function(){
+$(".btn-two").click(function(){
+   str= $("p:first").text();
+   alert(str);
+});
+});
+$(document).ready(function(){
+$(".btn-three").click(function(){
+   str= $("p.extra").text();
+   alert(str);
+});
+});
+    
+    </script> 
+    
+    
+    
+    
+</head>
+<body>
+    <button class="btn-one">btn1</button>
+    <button class="btn-two">btn2</button>
+    <button class="btn-three">btn3</button>
+    <p>This is a para</p>
+    <p>Hi</p>
+    <p class="extra">hello</p>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+$(".btn-one").click(finction(){
+    $("p").text("hi")
+});
+});
+$(document).ready(function(){
+    $(".btn-two").click(function(){
+        $("p:first").text("hello")
+    });
+});
+$(document).ready(function(){
+    $(".btn-three").click(function(){
+        $(".empty").text("bye")
+    });
+});
+    </script>
+</head>
+<body>
+    <button class="btn-one">btn-one</button>
+    <button class="btn-two">btn-two</button>
+    <button class="btn-three">btn-three</button>
+    <p>text1</p>
+    <p>text2
+    </p>
+    <p class="empty">text3</p>
+</body>
+</html>
